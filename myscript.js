@@ -24,6 +24,8 @@ $("#reset").click(()=>{
   a=0;
   colorchange(a);
   $("#count").text(a)
+  $("#incre").prop('disabled', false);
+  $("#decre").prop('disabled', false);
 })
 })
 function colorchange(b){
@@ -33,11 +35,13 @@ function colorchange(b){
     $("#headings").removeClass("text-dark");
     $("#headings").addClass("text-light");
     $("#count").addClass("text-danger");
+    $("#reset").addClass("btn-outline-light")
   }else{
     $("#mydiv").removeClass("bg-dark");
     $("#mydiv").addClass("bg-primary");
     $("#headings").removeClass("text-light");
     $("#headings").addClass("text-dark");
     $("#count").removeClass("text-danger");
+    $("#reset").removeClass("btn-outline-light")
   }
 }
